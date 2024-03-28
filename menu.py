@@ -179,7 +179,6 @@ while place_order:
                 # Tell the customer to try again
                 print("Please try again using either 'Y' or 'N'")
 
-o
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
 
@@ -198,8 +197,8 @@ for i in range(len(order_list)):
 
     # 8. Calculate the number of spaces for formatted printing
     item_name_spaces = 26 - len(item_name)
-    price_spaces = 7 - len(str(price))
-    quantity_spaces = 10 - len(str(quantity))
+    price_spaces = 5 - len(str(price))
+    quantity_spaces = 9 - len(str(quantity))
 
     # 9. Create space strings
     item_space_string = " " * item_name_spaces
@@ -207,10 +206,11 @@ for i in range(len(order_list)):
     quantity_space_string = " " * quantity_spaces
 
     # 10. Print the item name, price, and quantity
-    print(f"{item_name}{item_space_string}      | ${price: .2f}{price_space_string} | {quantity}{quantity_space_string}")
+    print(f"{item_name}{item_space_string}| ${price: .2f}{price_space_string}| {quantity}{quantity_space_string}")
 
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 total_cost = sum([item["Price"] * item["Quantity"] for item in order_list])
-print(f"Final cost: {total_cost: .2f}")
+print("----------------------------------------------")
+print(f"Final cost: ${total_cost: .2f}")
