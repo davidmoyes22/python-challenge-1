@@ -166,6 +166,7 @@ while place_order:
                 # Keep ordering
                 place_order = True
                 # Exit the keep ordering question loop
+                break
                 # Complete the order
             case "N":
                 # Since the customer decided to stop ordering, thank them for
@@ -184,16 +185,6 @@ print("This is what we are preparing for you.\n")
 
 # Uncomment the following line to check the structure of the order
 #print(order)
-order_list = {
-    "Item name": "Teriyaki Chicken",
-    "Price": 9.99,
-    "Quantity": 2
-},
-{
-    "Item name": "Australian Pavlova",
-    "Price": 9.99,
-    "Quantity": 2
-},
 print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
 
